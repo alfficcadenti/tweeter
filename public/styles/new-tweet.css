@@ -1,0 +1,24 @@
+ section.new-tweet {
+  background-color: #D5DBDB;
+  border-radius: 25px;
+  padding:10px;
+  margin: 10px;
+  text-align: left;
+  border:1px solid #244751;
+}
+
+ section.new-tweet > form > textarea {
+  padding: 10px;
+  width: 100%;
+}
+
+section.new-tweet > h2:after
+{
+  content:'';
+  display:block;
+  border:1px solid #244751;
+}
+
+.counter {
+  float: right;
+}
