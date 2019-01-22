@@ -1,0 +1,43 @@
+article.tweet {
+  background-color: #D5DBDB;
+  border-radius: 25px;
+  padding:10px;
+  margin: 10px;
+  text-align: left;
+  border:1px solid #244751;
+}
+
+article.tweet > header {
+  background-color: #D5DBDB;
+  border-radius: 25px;
+  padding:10px;
+  margin: 10px;
+  text-align: left;
+  border:1px solid #244751;
+}
+
+article.tweet > header > img {
+  float:left;
+}
+
+article.tweet > header > span.handle {
+  float:right;
+}
+
+article.tweet > main {
+  background-color: #D5DBDB;
+  border-radius: 25px;
+  padding:10px;
+  margin: 10px;
+  text-align: left;
+  border:1px solid #244751;
+}
+
+article.tweet > footer {
+  background-color: #D5DBDB;
+  border-radius: 25px;
+  padding:10px;
+  margin: 10px;
+  text-align: left;
+  border:1px solid #244751;
+}
