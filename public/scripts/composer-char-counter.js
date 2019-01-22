@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   //jQuery count letter in tweet composer:
   $("textarea").on("keyup",function() {
-    $("span.counter").text(140 - this.value.length)
+    $(this).siblings(".counter").text(140 - this.value.length)
       if ($("span.counter").text() <= 0) {
         $("span.counter").css("color", "red")
       }
