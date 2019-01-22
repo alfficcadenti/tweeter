@@ -1,15 +1,13 @@
 $(document).ready(function() {
 
-//JAvascript
-document.querySelector("textarea").addEventListener("focus",function() {
-  //console.log("focused")
-})
-
-//jQuery code:
-$("textarea").on("click", function() {
-  console.log("jquwery")
-})
-
-
-
+  //jQuery count letter in tweet composer:
+  $("textarea").on("keyup",function() {
+    $("span.counter").text(140 - this.value.length)
+      if ($("span.counter").text() <= 0) {
+        $("span.counter").css("color", "red")
+      }
+      else {
+        $("span.counter").css("color", "#244751")
+      }
+  })
 });
