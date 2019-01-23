@@ -77,6 +77,11 @@ function cleanNewTweet() {
 
 $(document).ready(function() {
 
+  $( "#compose-button" ).button({
+    icon: "ui-icon-pencil"
+    }).click(function () {
+      $( "section.new-tweet" ).toggle( "slow", function() {});
+    });
   //GET TWEETS
   $.get("/tweets", function(data, status){
     renderTweets(data);

@@ -22,3 +22,8 @@
   line-height: 2.5;
   float: left;
  }
+
+  #nav-bar .compose-button {
+  line-height: 2.5;
+  float: right;
+ }
