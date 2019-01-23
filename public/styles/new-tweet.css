@@ -22,3 +22,10 @@ section.new-tweet > h2:after
 .counter {
   float: right;
 }
+
+
+ .ui-state-error {
+  text-align: center;
+  visibility: hidden;
+
+ }

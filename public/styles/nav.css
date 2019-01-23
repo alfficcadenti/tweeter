@@ -26,9 +26,6 @@
   #nav-bar .compose-button {
   line-height: 2.5;
   float: right;
+
  }
 
- .ui-state-error {
-  text-align: center;
-  visibility: hidden;
- }

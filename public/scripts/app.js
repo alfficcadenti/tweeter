@@ -80,9 +80,7 @@ $(document).ready(function() {
 
 
   //compose button toggle
-  $( "#compose-button" ).button({
-    icon: "ui-icon-pencil"
-    }).click(function () {
+  $( "#compose-button" ).click(function () {
       $( "section.new-tweet" ).slideToggle( "slow", function() {
         $("section.new-tweet > form > textarea").focus();
       });
@@ -103,15 +101,15 @@ $(document).ready(function() {
     var tweetContent = '';
     tweetContent = $("section.new-tweet > form > textarea").val().length;
     if (tweetContent === 0) {
-      $(".ui-state-error").slideDown().css('visibility','visible');
+      $(".ui-state-error").css('visibility','visible');
       $(".ui-state-error").text("Error: the tweet is empty!");
     }
     else if (tweetContent > 140) {
-      $(".ui-state-error").slideDown().css('visibility','visible');
+      $(".ui-state-error").css('visibility','visible');
       $(".ui-state-error").text("Error: the tweet is too long! Max 140 characters");
     }
     else {
-      $(".ui-state-error").slideUp().css('visibility','hidden');
+      $(".ui-state-error").css('visibility','hidden');
       //get the action-url of the form
       var actionurl = event.currentTarget.action;
       //submit new tweet
