@@ -80,18 +80,30 @@ $(document).ready(function() {
 
   //PREVENT FORM SUBMISSION AND AJAX CALL
   $("section.new-tweet > form").submit(function( event ) {
-    let content = ""//this.serialize();
     event.preventDefault();
-    //get the action-url of the form
-    var actionurl = event.currentTarget.action;
-    //do your own request an handle the results
-    $.ajax({
-      url: actionurl,
-      type: 'post',
-      dataType: 'application/json',
-      data: $("section.new-tweet > form").serialize(),
-      success: function(data) {console.log(data)}
+
+    //ERRORS handling
+    var tweetContent = '';
+    tweetContent = $("section.new-tweet > form > textarea").val().length;
+    if (tweetContent === 0) {
+      alert("Error!!! The tweet is empty!")
+    }
+    else if (tweetContent > 140) {
+      alert("the tweet is too long! Max 140 characters")
+    }
+    else {
+      //get the action-url of the form
+      var actionurl = event.currentTarget.action;
+      //do your own request an handle the results
+      $.ajax({
+        url: actionurl,
+        type: 'post',
+        dataType: 'application/json',
+        data: $("section.new-tweet > form").serialize(),
+        success: function(data) {console.log(data)}
     });
+    }
+
   });
 
 });
