@@ -95,16 +95,26 @@ $(document).ready(function() {
       //get the action-url of the form
       var actionurl = event.currentTarget.action;
       //do your own request an handle the results
-      $.ajax({
+      var ajaxCall = $.ajax({
         url: actionurl,
         type: 'post',
         dataType: 'application/json',
         data: $("section.new-tweet > form").serialize(),
-        success: function(data) {console.log(data)}
+        success: function() {
+          console.log(this)
+          alert("OK")
+        }
+      });
+
+    ajaxCall.done(function( msg ) {
+      alert( "Data Saved: " + msg );
     });
+
+
     }
 
   });
+
 
 });
 
