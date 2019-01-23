@@ -24,14 +24,19 @@
 
     <!-- Tweet CSS -->
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+
+    <!-- Icon from FontAwesome link -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <!-- jQuery UI for the button -->
     <link rel="stylesheet" href="/vendor/jquery-ui/jquery-ui.min.css">
-<!--     <script src="external/jquery/jquery.js"></script>
- -->    <script src="/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/vendor/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- Tweets Rendering JS -->
+    <script type="text/javascript" src="/scripts/tweets-rendering.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
@@ -53,20 +58,21 @@
         <i class="far fa-edit"></i>Compose
       </span>
     </nav>
-    <!-- Page-specific (main) content here -->
 
+    <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets/" method="POST">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
-
           <span class="counter">140</span>
+          <div id="error-div">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span class="ui-state-error ui-corner-all"></span>
 
-          <div class="ui-state-error ui-corner-all">
-            <span class="ui-icon ui-icon-alert"></span>
           </div>
+
 
         </form>
       </section>

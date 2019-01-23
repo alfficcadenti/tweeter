@@ -24,6 +24,8 @@
  }
 
   #nav-bar .compose-button {
+  margin: 5px;
+  padding: 5px;
   line-height: 2.5;
   float: right;
 
