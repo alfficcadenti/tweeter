@@ -39,6 +39,8 @@ function tweetAge(date) {
 }
 
 function renderTweets(tweets) {
+  $('#tweet-container').html('')
+  var tweets = tweets.reverse();
   for (let i in tweets) {
       let $tweet = createTweetElement(tweets[i]);
       $('#tweet-container').append($tweet);
@@ -69,10 +71,13 @@ function createTweetElement(tweetData) {
   return $tweet;
 }
 
+function cleanNewTweet() {
+  tweetContent = $("section.new-tweet > form > textarea").val('')
+}
+
 $(document).ready(function() {
 
   //GET TWEETS
-
   $.get("/tweets", function(data, status){
     renderTweets(data);
   });
@@ -94,23 +99,19 @@ $(document).ready(function() {
     else {
       //get the action-url of the form
       var actionurl = event.currentTarget.action;
-      //do your own request an handle the results
-      var ajaxCall = $.ajax({
-        url: actionurl,
-        type: 'post',
-        dataType: 'application/json',
+      //submit new tweet
+      $.ajax(actionurl, {
+        method: 'POST',
         data: $("section.new-tweet > form").serialize(),
-        success: function() {
-          console.log(this)
-          alert("OK")
-        }
-      });
-
-    ajaxCall.done(function( msg ) {
-      alert( "Data Saved: " + msg );
-    });
-
-
+        success: function() {},
+        error: function() {},
+        //action after POST
+      }).then(function() {
+          cleanNewTweet();
+          $.get("/tweets", function(data, status){
+            renderTweets(data);
+          });
+        })
     }
 
   });
