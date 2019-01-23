@@ -1,9 +1,9 @@
 article.tweet {
-
   border-radius: 25px;
   margin: 10px;
   text-align: left;
   border:1px solid #244751;
+  opacity: 0.5;
 }
 
 article.tweet > header {
@@ -20,6 +20,10 @@ article.tweet > header > img {
   /*float:left;*/
   border-radius: 5px;
 
+}
+
+article.tweet:hover {
+  opacity: 1;
 }
 
 /*article.tweet > header >*/ span.username {

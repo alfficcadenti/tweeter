@@ -9,6 +9,7 @@
   padding-right: 2em;
   padding-left: 2em;
   vertical-align: middle;
+  z-index: 999;
  }
 
  #nav-bar .logo {
