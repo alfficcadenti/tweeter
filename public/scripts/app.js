@@ -80,7 +80,9 @@ $(document).ready(function() {
   $( "#compose-button" ).button({
     icon: "ui-icon-pencil"
     }).click(function () {
-      $( "section.new-tweet" ).toggle( "slow", function() {});
+      $( "section.new-tweet" ).toggle( "slow", function() {
+        $("section.new-tweet > form > textarea").focus();
+      });
     });
   //GET TWEETS
   $.get("/tweets", function(data, status){
