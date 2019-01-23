@@ -51,18 +51,20 @@ function createTweetElement(tweetData) {
   let $tweet =
           ($("<article>").addClass("tweet")
           // append a header to the article
-          .append($("<header>")
-            .append($("<img>")
-              .attr("src",tweetData.user.avatars.small))
-            .append($("<span>").text(tweetData.user.name).addClass("username"))
+            .append($("<header>")
+              .append($("<img>")
+                .attr("src",tweetData.user.avatars.small))
+              .append($("<span>").text(tweetData.user.name).addClass("username"))
 
-            .append($("<span>").text(tweetData.user.handle).addClass("handle")
-              )
-          )
-          // append a main to the article
-          .append($("<div>").text(tweetData.content.text))
-          // append a footer to the article
-          .append($("<footer>").text(tweetDate))
+              .append($("<span>").text(tweetData.user.handle).addClass("handle")
+                )
+            )
+            // append a main to the article
+            .append($("<div>").text(tweetData.content.text))
+            // append a footer to the article
+            .append($("<footer>").text(tweetDate)//.append($("<span").addClass("ui-icon ui-icon-arrowthick-1-n"))
+            )
+
           );
   return $tweet;
 }
@@ -70,6 +72,7 @@ function createTweetElement(tweetData) {
 $(document).ready(function() {
 
   //GET TWEETS
+
   $.get("/tweets", function(data, status){
     renderTweets(data);
   });
