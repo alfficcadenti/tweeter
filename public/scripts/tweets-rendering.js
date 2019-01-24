@@ -17,12 +17,12 @@ function tweetAge(date) {
     //if less than 1 day
     else if (timediff < 1000*60*60*24) {
         let time = Math.floor(timediff / hour);
-        return time + " days ago";
+        return time + " hours ago";
     }
     //if less than 1 week
     else if (timediff < 1000*60*60*24*7) {
         let time = Math.floor(timediff / day);
-        return time + " months ago";
+        return time + " day ago";
     }
     else {
         let time = Math.floor(timediff / month);
@@ -49,7 +49,6 @@ function renderTweets(tweets) {
 
   //order the tweets first
   var tweets = tweets.sort(compareAge);
-  //var tweets = tweets.reverse();
   for (let i in tweets) {
       let $tweet = createTweetElement(tweets[i]);
       $('#tweet-container').append($tweet);
