@@ -2,6 +2,9 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
+!["Tweeter view"](https://github.com/alfficcadenti/tweeter/blob/master/public/images/screenshot.png)
+
+
 This repository is the starter code for a Twitter Clone project:
 
 ## Getting Started
