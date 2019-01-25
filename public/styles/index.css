@@ -1,0 +1,135 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+body {
+  margin: 0;
+  color: #244751;
+  background-color: #eee;
+  font-family: "Roboto Condensed", sans-serif;
+  text-align: center;
+}
+
+main {
+  width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  margin-top: 140px;
+  padding: 20px;
+}
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #00a087;
+  color: #e8fdff;
+  padding-right: 2em;
+  padding-left: 2em;
+  vertical-align: middle;
+  z-index: 999;
+}
+#nav-bar .logo {
+  height: 80px;
+  float: left;
+}
+#nav-bar .header {
+  font-size: 200%;
+  line-height: 2.5;
+  float: left;
+}
+#nav-bar .compose-button {
+  margin: 5px;
+  padding: 5px;
+  line-height: 2.5;
+  float: right;
+}
+
+/*NEW TWEET*/
+section.new-tweet {
+  display: none;
+  background-color: #eee;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px;
+  text-align: left;
+  border: 1px solid #244751;
+}
+section.new-tweet form > textarea {
+  padding: 10px;
+  width: 100%;
+}
+section.new-tweet h2:after {
+  content: "";
+  display: block;
+  border: 1px solid #244751;
+}
+section.new-tweet .counter {
+  float: right;
+}
+section.new-tweet #error-div {
+  text-align: center;
+  visibility: hidden;
+}
+
+/*TWEEET*/
+article.tweet:hover {
+  opacity: 1;
+}
+
+article.tweet {
+  border-radius: 25px;
+  margin: 10px;
+  text-align: left;
+  border: 1px solid #244751;
+  opacity: 0.5;
+}
+article.tweet header {
+  background-color: #eee;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  text-align: left;
+  padding: 10px;
+}
+article.tweet header img {
+  margin: 5px;
+  margin-bottom: 0;
+  border-radius: 5px;
+}
+article.tweet span.username {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 10px;
+}
+article.tweet span.handle {
+  float: right;
+}
+article.tweet p {
+  font-style: oblique;
+  text-align: left;
+  padding: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  word-wrap: break-word;
+}
+article.tweet footer {
+  padding: 10px;
+  text-align: left;
+}
+article.tweet footer span.tweetbuttons {
+  display: none;
+  float: right;
+  padding: 10px;
+  text-align: left;
+}
+
+/*# sourceMappingURL=index.css.map */
